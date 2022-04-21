@@ -28,16 +28,8 @@ fi
 
 export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
 
-which ant
-ant -version
-
 which java
 java -version
-
-export ANT_OPTS="-Xmx2G -Djavax.xml.accessExternalStylesheet=all \
--Djavax.xml.accessExternalSchema=all \
--DenableExternalEntityProcessing=true \
--Djavax.xml.accessExternalDTD=file,http,https"
 
 export TCK_NAME="jsf"
 
