@@ -96,7 +96,7 @@
                 <executions>
                     <execution>
                         <id>download-ant</id>
-                        <phase>generate-resources</phase>
+                        <phase>generate-sources</phase>
                         <goals>
                             <goal>wget</goal>
                         </goals>
