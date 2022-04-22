@@ -124,7 +124,7 @@
                         <configuration>
                             <executable>docker/build_oldtck.sh</executable>
                             <arguments>
-                                <argument>${maven.multiModuleProjectDirectory}/faces-tck</argument> 
+                                <argument>${maven.multiModuleProjectDirectory}</argument> 
                                 <argument>${ant.home}</argument> 
                             </arguments>
                             <successCodes>
