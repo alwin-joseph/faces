@@ -123,6 +123,10 @@
                         </goals>
                         <configuration>
                             <executable>docker/build_oldtck.sh</executable>
+                            <arguments>
+                                <argument>${maven.multiModuleProjectDirectory}/faces-tck</argument> 
+                                <argument>${ant.home}</argument> 
+                            </arguments>
                             <successCodes>
                                 <successCode>0</successCode>
                                 <successCode>1</successCode>
