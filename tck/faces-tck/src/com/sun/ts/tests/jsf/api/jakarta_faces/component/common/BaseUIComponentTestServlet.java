@@ -1371,7 +1371,9 @@ public abstract class BaseUIComponentTestServlet
 
     UIComponent component = createComponent();
     component.setId("test_ID");
-    ((UIViewRoot)component).setViewId("/test.xhtml");
+    if(component instanceof UIViewRoot){
+      ((UIViewRoot)component).setViewId("/test.xhtml");
+    }
     String uicType = component.getClass().getSimpleName();
 
     /*
@@ -1442,7 +1444,9 @@ public abstract class BaseUIComponentTestServlet
 
     UIComponent component = createComponent();
     component.setId("test_ID");
-    ((UIViewRoot)component).setViewId("/test.xhtml");
+    if(component instanceof UIViewRoot){
+      ((UIViewRoot)component).setViewId("/test.xhtml");
+    }
 
     String uicType = component.getClass().getSimpleName();
 
@@ -3502,9 +3506,11 @@ public abstract class BaseUIComponentTestServlet
     UIComponent compOne = createComponent();
     UIComponent compTwo = createComponent();
     compOne.setId("compOne");
-    ((UIViewRoot)compOne).setViewId("/test.xhtml");
     compTwo.setId("compTwo");
-    ((UIViewRoot)compTwo).setViewId("/test2.xhtml");
+    if(compOne instanceof UIViewRoot && compTwo instanceof UIViewRoot ){
+      ((UIViewRoot)compOne).setViewId("/test.xhtml");
+      ((UIViewRoot)compTwo).setViewId("/test2.xhtml");
+    }
     String oneType = compOne.getClass().getSimpleName();
     String twoType = compTwo.getClass().getSimpleName();
 
@@ -3886,7 +3892,9 @@ public abstract class BaseUIComponentTestServlet
 
     UIComponent comp = createComponent();
     comp.setRendered(true);
-    ((UIViewRoot)comp).setViewId("/test.xhtml");
+    if(comp instanceof UIViewRoot){
+      ((UIViewRoot)comp).setViewId("/test.xhtml");
+    }
 
     String sRendererType = comp.getRendererType();
     String sRendererFamily = comp.getFamily();
@@ -3945,7 +3953,9 @@ public abstract class BaseUIComponentTestServlet
 
     UIComponent comp = createComponent();
     comp.setRendered(false);
-    ((UIViewRoot)comp).setViewId("/test.xhtml");
+    if(comp instanceof UIViewRoot){
+      ((UIViewRoot)comp).setViewId("/test.xhtml");
+    }
     String sRendererType = comp.getRendererType();
     String sRendererFamily = comp.getFamily();
 
